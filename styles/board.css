@@ -1,0 +1,85 @@
+.colors3 {
+  color: #37392E;
+  color: #19647E;
+  color: #28AFB0;
+  color: #DDCECD;
+  color: #EEE5E5;
+}
+
+.SudokuEngine {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.SudokuBoard {
+  
+  display: grid;
+  grid-template-columns: repeat(9, 35px);
+  grid-template-rows: repeat(9, 35px);
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.SudokuBoardCells {
+  border: 0.08rem solid rgb(255, 147, 79);
+}
+
+.SudokuBoardCells:hover {
+  background-color: #28AFB0;
+}
+
+.ValuesTemplate {
+  padding-left: 2rem;
+  align-self: flex-end;
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  grid-template-rows: repeat(3, 50px);
+  grid-column: 2/2;
+  grid-row: 1/1;
+}
+
+.NumberValues {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-top:11px;
+    height: 46.81px;
+    align-self: center;
+    border-radius: 0.5rem;
+    margin: 0.1rem;
+    text-align: center;
+    background-color: #37392E;    
+}
+
+.NumberValues:hover {
+  background-color: #28AFB0;    
+}
+
+.RestartButton {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  grid-column: 2/2;
+  grid-row: 1/1;
+}
+
+.RestartButton button {
+  font-size: 1.08rem;
+  width: 18rem;
+  height: 2.23rem;
+  text-align: center;
+  background-color: #37392E;
+  color:#F2EFEA;
+  margin-bottom: 0.25rem;
+  border-radius: 1rem;
+  border:rgb(255, 147, 79) 0.1rem solid;
+}
+
+.RestartButton button:hover {
+  background-color: #28AFB0;
+}
+
+
+
+
