@@ -5,7 +5,7 @@ function Navbar(props) {
   return (
     <div className="Navbar">
       <h3>Sudoku Game</h3>
-      <button><a href="https://github.com">Source code</a> <FontAwesomeIcon icon={faGithub} /></button>
+      <button><a href="https://github.com/fi9ish/sudoku.js">Source code</a> <FontAwesomeIcon icon={faGithub} /></button>
     </div>
   );
 }

@@ -8,7 +8,10 @@ import values from "./defaultValues"
 
 
 function SudokuEngine(props) {
-  let [cellValues, updateCellValues] = React.useState(values);
+  const [cellValues, updateCellValues] = React.useState(values);
+
+  const [isNotSolvable, setIsNotSolvable] = React.useState(false)
+
 
   React.useEffect(() => {
     updateCellValues(generate())
@@ -19,8 +22,9 @@ function SudokuEngine(props) {
   return (
     <div className="SudokuEngine">
       <SudokuBoard cellValues={cellValues} updateCellValues={updateCellValues}></SudokuBoard>
-      <RestartButton cellValues={cellValues} updateCellValues={updateCellValues}></RestartButton>
+      <RestartButton setIsNotSolvable={setIsNotSolvable} updateCellValues={updateCellValues}></RestartButton>
       <ValuesTemplate updateCellValues={updateCellValues}></ValuesTemplate>
+      {isNotSolvable && <p className='notsolvable'>The number you entered is not solvable!</p>}
     </div>
   );
 }

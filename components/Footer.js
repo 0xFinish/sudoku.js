@@ -10,9 +10,9 @@ function Footer(props) {
     <div className="Footer">
       <p>Made by @fi9ish</p>
       <span className="Footericons">
-        <a clasName="profileLink" href="https://google.com" ><FontAwesomeIcon className="icon" icon={faTwitter} size="xl"></FontAwesomeIcon></a>
-        <a clasName="profileLink" href="#"><FontAwesomeIcon className="icon" icon={faTelegram} size="xl"></FontAwesomeIcon></a>
-        <a clasName="profileLink" href="#"><FontAwesomeIcon className="icon" icon={faGithub} size="xl"></FontAwesomeIcon></a>
+        <a className="profileLink" href="https://twitter.com/FinishMee" ><FontAwesomeIcon className="icon" icon={faTwitter} size="xl"></FontAwesomeIcon></a>
+        <a className="profileLink" href="https://t.me/fi9ish"><FontAwesomeIcon className="icon" icon={faTelegram} size="xl"></FontAwesomeIcon></a>
+        <a className="profileLink" href="https://github.com/fi9ish/"><FontAwesomeIcon className="icon" icon={faGithub} size="xl"></FontAwesomeIcon></a>
       </span>
     </div>
   );
