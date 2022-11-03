@@ -1,25 +1,4 @@
-.colors {
-    color: rgb(255, 147, 79);
-    color: rgb(53, 80, 112);
-    color: rgb(141, 161, 185);
-    color: rgb(226, 235, 152);
-    color: rgb(255, 250, 204);
-}
-.colors2 {
-    color: #EEE5E5;
-    color: #749C75;
-    color: #183a37;
-    color: #c44900;
-    color: #6f9283;
-}
 
-.colors3 {
-    color: #37392E;
-    color: #19647E;
-    color: #28AFB0;
-    color: #DDCECD;
-    color: #EEE5E5;
-}
 
 * {
     margin: 0;
@@ -67,9 +46,13 @@ body {
 }
 
 .Navbar button {
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
     font-size: medium;
     align-self: center;
-    width: 8rem;
+    width: 9rem;
     height: 2.25rem;
     margin-right: 1.5rem;
     border-radius: 1rem;
@@ -88,20 +71,18 @@ body {
 }
 
 .Timer {
-    padding-top: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 14rem;
     margin-right: 1.5rem;
     align-self:flex-end;
     border-radius: 1.5rem;
     height: 3rem;
-    text-align: center;
     color: #EEE5E5;
     background-color: #19647E;
 }
 
-.timerButton {
-    padding-left: 0.7rem;
-}
 
 .timerButton:hover {
     color: #28AFB0;
@@ -201,6 +182,17 @@ body {
     color:#28AFB0;
 }
 
+.Footericons {
+    display: flex;
+    gap:0.66rem;
+}
+
+.ReloadButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
 
 
 

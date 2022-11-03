@@ -1,37 +1,33 @@
 import { sudokuSolver, generate } from "./sudokuSolver";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTrash,
-  faUpload,
-  faArrowsRotate,
-  faCheckCircle,
-  faRotateRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { VscDebugRestart } from "react-icons/vsc";
+import { MdOutlineDownloadDone } from "react-icons/md";
+import { GiBackwardTime } from "react-icons/gi";
 
 function RestartButton(props) {
+
+  const iconSize = 25
+
   return (
     <div className="RestartButton">
       <button
+        className="ReloadButton"
         onClick={() => {
           location.reload();
         }}
       >
-        Restart me{" "}
-        <FontAwesomeIcon
-          icon={faArrowsRotate}
-          scale={2}
-          size="lg"
-        ></FontAwesomeIcon>
+        Restart me
+        <VscDebugRestart size={iconSize}></VscDebugRestart>
       </button>
       <button
+        className="ReloadButton"
         onClick={() => {
-          props.updateCellValues((prev) => {          
+          props.updateCellValues((prev) => {
             if (sudokuSolver(prev)[0][0] === undefined) {
-              console.log("setIsNotSolvable true")
+              console.log("setIsNotSolvable true");
               props.setIsNotSolvable(true);
-              return prev
+              return prev;
             } else {
-              console.log("setIsNotSolvable false")
+              console.log("setIsNotSolvable false");
               props.setIsNotSolvable(false);
               return sudokuSolver(prev);
             }
@@ -39,24 +35,16 @@ function RestartButton(props) {
         }}
       >
         Complete the sudoku!{" "}
-        <FontAwesomeIcon
-          icon={faCheckCircle}
-          scale={2}
-          size="lg"
-        ></FontAwesomeIcon>
+        <MdOutlineDownloadDone size={iconSize}></MdOutlineDownloadDone>
       </button>
       <button
+        className="ReloadButton"
         onClick={() => {
           console.log("Generate");
           props.updateCellValues(generate());
         }}
       >
-        Generate new board!{" "}
-        <FontAwesomeIcon
-          icon={faRotateRight}
-          scale={2}
-          size="lg"
-        ></FontAwesomeIcon>
+        Generate new board! <GiBackwardTime size={iconSize}></GiBackwardTime>
       </button>
     </div>
   );

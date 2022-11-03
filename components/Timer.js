@@ -1,10 +1,5 @@
-import {
-  faCirclePause,
-  faPause,
-  faPauseCircle,
-  faStop,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { BsFillStopFill } from "react-icons/bs"
+
 import React from "react";
 
 function Timer(props) {
@@ -29,16 +24,8 @@ function Timer(props) {
     <div className="Timer">
       <p>
         <span>Timer :</span> {`${minutes} : ${seconds}`}
-        {/* <FontAwesomeIcon
-          className="timerButton"
-          icon={faPause}
-        ></FontAwesomeIcon> */}
-        <FontAwesomeIcon
-          className="timerButton"
-          icon={faStop}
-          onClick={() => {setMinutes(0), setSeconds(0)}}
-        ></FontAwesomeIcon>
       </p>
+      <BsFillStopFill size={25} onClick={() => {setMinutes(0), setSeconds(0)}} className="timerButton"></BsFillStopFill>
     </div>
   );
 }
