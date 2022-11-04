@@ -174,11 +174,11 @@ body {
     text-decoration: none;
 }
 
-.Footericons a, a:visited, a:active {
+.FootericonSingle a, a:visited, a:active {
     color: inherit;
 }
 
-.Footericons a:hover {
+.FootericonSingle:hover {
     color:#28AFB0;
 }
 

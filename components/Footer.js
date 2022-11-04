@@ -1,19 +1,27 @@
-import { FaTelegramPlane } from "react-icons/fa"
-import { BsTwitter } from "react-icons/bs"
-import { FiGithub } from "react-icons/fi"
-import Image from "next/image";
+import { FaTelegramPlane } from "react-icons/fa";
+import { BsTwitter } from "react-icons/bs";
+import { FiGithub } from "react-icons/fi";
+import Link from "next/link";
 
 function Footer(props) {
-
-  const iconSize = 27
+  const iconSize = 27;
 
   return (
     <div className="Footer">
       <p>Made by @fi9ish</p>
       <span className="Footericons">
-        <Image className="profileLink" href="https://twitter.com/FinishMee" alt="photo"><FaTelegramPlane size={iconSize}></FaTelegramPlane></Image>
-        <Image className="profileLink" href="https://t.me/fi9ish" alt="photo"><BsTwitter size={iconSize}></BsTwitter></Image>
-        <Image className="profileLink" href="https://github.com/fi9ish/" alt="photo"><FiGithub size={iconSize}></FiGithub></Image>
+        <Link href="https://github.com/fi9ish/" alt="photo">
+          <FiGithub className="FootericonSingle" size={iconSize}></FiGithub>
+        </Link>
+        <Link href="https://twitter.com/FinishMee" alt="photo">
+          <BsTwitter className="FootericonSingle" size={iconSize}></BsTwitter>
+        </Link>
+        <Link href="https://t.me/fi9ish" alt="photo">
+          <FaTelegramPlane
+            className="FootericonSingle"
+            size={iconSize}
+          ></FaTelegramPlane>
+        </Link>
       </span>
     </div>
   );
